@@ -10,6 +10,10 @@
 
   var HERO_CHAIN = ['Реклама', 'Метка в ссылке', 'Сайт', 'Заказ', 'CRM', 'Оплата', 'Отчёт'];
 
+  var HERO_TIPS = ['Google, Яндекс, Facebook и Instagram', 'Хвостик в адресе — по нему видно, откуда пришёл человек',
+    'serikovcoffee.kz на Битриксе', 'Корзина и оформление на одной странице', 'Сделка в Битрикс24 у менеджера',
+    'Halyk ePay: карта, Apple Pay, Google Pay', 'Сколько потратили на рекламу и сколько заработали'];
+
   var TICKER = ['Битрикс', '1С', 'Halyk ePay', 'Google', 'Яндекс', 'Facebook', 'Instagram', 'WhatsApp',
     'Битрикс24', 'Wazzup', 'СДЭК', 'Яндекс Доставка', 'Метрика', 'Analytics'];
 
@@ -253,6 +257,36 @@
     ]
   };
 
+  PLATFORMS.seo = [
+    ['yes', 'Описания товаров для поиска',
+      'Под каждой ссылкой в поиске теперь стоит наш текст о вкусе, а не случайный кусок страницы. Сделано для карточек товаров.',
+      ['Описание собирается из вкуса и характеристик', 'Проверено выборочно на карточках', 'Дальше — описания разделов и страниц городов']],
+    ['yes', 'Картинка для соцсетей',
+      'Когда ссылку на кофе отправляют в WhatsApp или Instagram, в превью видна сама пачка, а не общий баннер.',
+      ['Фото товара в превью ссылки', 'Работает на карточках товаров']],
+    ['no', 'Подсказки для поисковика (микроразметка)',
+      'Google и Яндекс покажут цену, вес и наличие — а когда накопятся отзывы, и звёзды — прямо в результатах поиска. Такой результат заметнее и чаще получает клик.',
+      ['Разметка товара: название, цена, наличие', 'Путь раздел → товар в выдаче', 'Оценка — после первых отзывов', 'Проверка в инструментах Google и Яндекса']],
+    ['no', 'Понятные адреса товаров',
+      'Сейчас адрес товара — номер: /catalog/coffee/56/. В понятном адресе видно название кофе — это удобнее людям и понятнее поиску.',
+      ['Адреса из названий: /catalog/coffee/serikov-blend/', 'Старые ссылки переадресуются на новые', 'Обновление карты сайта']],
+    ['no', 'Одна главная версия страницы',
+      'Сортировки и страницы каталога открываются по разным адресам с одинаковым содержимым. Поиск считает их дублями и путается, что показывать.',
+      ['Указание главной версии на каждой странице', 'Служебные адреса закрыть от поиска']],
+    ['no', 'Страницы под города',
+      'Люди ищут «кофе в зёрнах Алматы», «кофе Астана доставка». Под такие запросы нужны страницы с доставкой и точками в каждом городе.',
+      ['Караганда, Алматы, Астана', 'Условия доставки и адреса точек', 'Ссылки на них с карт и из рекламы']],
+    ['part', 'Карты: 2ГИС, Яндекс, Google',
+      'Для кофейни карта — это витрина: маршрут, часы, фото, отзывы. В Казахстане особенно важен 2ГИС.',
+      ['Проверить и заявить карточки точек', 'Часы работы, рубрики, 15–20 фото', 'Ссылка на сайт с меткой', 'Ответы на отзывы в течение суток']],
+    ['no', 'Ответы нейросетей (GEO)',
+      'Всё больше людей спрашивают не поисковик, а ChatGPT, Алису или обзор в Google. Нейросеть собирает ответ из фактов, которые находит. Задача — чтобы в ответе про свежий кофе в Казахстане звучал Serikov.',
+      ['Факты на виду: с 2009 года, первая обжарка в Казахстане, ростеры Giesen и Probat, три города', 'Страница частых вопросов простым языком', 'Файл-описание магазина для нейросетей (llms.txt)', 'Упоминания в подборках и городских обзорах']],
+    ['part', 'Статьи и гиды',
+      'Гиды «как заварить дрип», «какой помол для турки» приводят людей из поиска и из нейросетей — и сразу ведут в каталог.',
+      ['Блог уже есть — 9 статей', 'Новые темы по реальным запросам', 'Ссылки из статей на товары']]
+  ];
+
   var CHAINS = {
     google: [
       ['Сайт', 'Сборщик счётчиков', 'Метрика', 'Analytics', 'Счётчик Facebook'],
@@ -297,6 +331,17 @@
       ['Заказ', 'Сделка', 'Источник в карточке'],
       ['Кабинеты', 'Расходы', 'Отчёт'],
       ['Метрика', 'CRM', 'Кабинеты', 'Отчёт']
+    ],
+    seo: [
+      ['Характеристики товара', 'Описание', 'Поиск'],
+      ['Фото товара', 'Превью ссылки', 'WhatsApp и Instagram'],
+      ['Битрикс', 'Разметка', 'Google и Яндекс', 'Цена в выдаче'],
+      ['Название', 'Новый адрес', 'Переадресация', 'Карта сайта'],
+      ['Страница', 'Главная версия', 'Поиск'],
+      ['Запрос с городом', 'Страница города', 'Доставка', 'Заказ'],
+      ['2ГИС', 'Яндекс Карты', 'Google Карты', 'Сайт с меткой'],
+      ['Факты на сайте', 'Частые вопросы', 'Нейросеть', 'Ответ с Serikov'],
+      ['Запрос', 'Статья', 'Товар', 'Заказ']
     ],
     support: [
       null,
@@ -397,12 +442,22 @@
   var progress = $('progress');
   var ticking = false;
 
+  var lastY = window.scrollY || 0;
+
   function onScroll() {
     ticking = false;
     var y = window.scrollY || window.pageYOffset;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     if (progress) progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0).toFixed(4) + ')';
-    if (topBar && hero) topBar.classList.toggle('solid', y > hero.offsetTop + hero.offsetHeight - 70);
+    if (topBar && hero) {
+      var past = y > hero.offsetTop + hero.offsetHeight - 70;
+      var dy = y - lastY;
+      topBar.classList.toggle('solid', past);
+      // вниз — прячем, вверх — показываем; над обложкой шапка видна всегда
+      if (past && dy > 6 && !topBar.contains(document.activeElement)) topBar.classList.add('hide');
+      else if (dy < -6 || !past) topBar.classList.remove('hide');
+    }
+    lastY = y;
   }
   window.addEventListener('scroll', function () {
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
@@ -424,7 +479,7 @@
   var heroChain = $('heroChain');
   if (heroChain) {
     heroChain.innerHTML = HERO_CHAIN.map(function (s, k) {
-      var el = '<span class="hc" style="--i:' + (k * 2) + ';--k:' + k + '">' + s + '</span>';
+      var el = '<span class="hc" tabindex="0" data-tip="' + HERO_TIPS[k] + '" style="--i:' + (k * 2) + ';--k:' + k + '">' + s + '</span>';
       if (k < HERO_CHAIN.length - 1) el += '<span class="hc-a" aria-hidden="true" style="--i:' + (k * 2 + 1) + ';--k:' + k + '">→</span>';
       return el;
     }).join('');
@@ -526,7 +581,8 @@
   function renderDetail(key) {
     var b = BRANCHES[key];
     if (!b || !detail) return;
-    var html = '<div class="detail-head"><span class="tag">' + b.cat + '</span><h3>' + b.title + '</h3></div>' +
+    var html = '<div class="detail-head"><span class="tag">' + b.cat + '</span><h3>' + b.title + '</h3>' +
+      '<button class="back-map" type="button">↑ к карте</button></div>' +
       '<p class="why">' + b.why + '</p><ul class="items">';
     b.items.forEach(function (it, i) {
       html += '<li style="animation-delay:' + (reduced ? 0 : Math.min(i * 45, 400)) + 'ms">' + chip(it[0]) + '<span>' + it[1] + '</span></li>';
@@ -614,8 +670,18 @@
       lines.forEach(function (l) { l.classList.toggle('on', l.dataset.key === n.dataset.key); });
       renderDetail(n.dataset.key);
       buildBeans();
+      // на узких экранах панель под картой — подвозим к ней сами
+      if (detail && !window.matchMedia('(min-width: 1100px)').matches) {
+        detail.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+      }
     });
   });
+
+  if (detail && stage) {
+    detail.addEventListener('click', function (e) {
+      if (e.target.closest('.back-map')) stage.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    });
+  }
 
   if (stage) {
     renderDetail('site');
@@ -635,6 +701,37 @@
 
   /* ======================= карточки, цепочки, словарь ======================= */
 
+  function addFilter(host, rows) {
+    var kinds = { no: 0, part: 0, yes: 0 };
+    rows.forEach(function (r) { kinds[r[0]]++; });
+    var present = ['no', 'part', 'yes'].filter(function (k) { return kinds[k] > 0; });
+    if (present.length < 2) return;
+    var names = { all: 'Все', no: 'Нет', part: 'Частично', yes: 'Есть' };
+    var bar = document.createElement('div');
+    bar.className = 'filter';
+    bar.setAttribute('role', 'group');
+    bar.setAttribute('aria-label', 'Показать карточки по статусу');
+    bar.innerHTML = ['all'].concat(present).map(function (k) {
+      var c = k === 'all' ? rows.length : kinds[k];
+      return '<button class="fbtn' + (k === 'all' ? ' on' : '') + '" type="button" aria-pressed="' + (k === 'all') + '" data-f="' + k + '">' + names[k] + '<span>' + c + '</span></button>';
+    }).join('') + '<span class="fsum">Готово <b>' + kinds.yes + '</b> из ' + rows.length + '</span>';
+    host.parentNode.insertBefore(bar, host);
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('.fbtn');
+      if (!b) return;
+      var f = b.dataset.f;
+      [].slice.call(bar.querySelectorAll('.fbtn')).forEach(function (x) {
+        x.classList.toggle('on', x === b);
+        x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+      });
+      [].slice.call(host.children).forEach(function (c) {
+        var show = f === 'all' || c.dataset.s === f;
+        c.hidden = !show;
+        if (show && !reduced) { c.classList.remove('fade'); void c.offsetWidth; c.classList.add('fade'); }
+      });
+    });
+  }
+
   function renderPlatform(hostId, key, numbered) {
     var host = $(hostId);
     var rows = PLATFORMS[key];
@@ -643,16 +740,18 @@
     host.innerHTML = rows.map(function (r, i) {
       var n = i + 1 < 10 ? '0' + (i + 1) : String(i + 1);
       var ch = chains[i] ? '<div class="chain card-chain"><span class="chain-lbl">Связка:</span>' + links(chains[i]) + '</div>' : '';
-      return '<article class="pcard" style="--i:' + i + '">' +
+      return '<article class="pcard" data-s="' + r[0] + '" style="--i:' + i + '">' +
         '<div class="pcard-top">' + (numbered ? '<span class="pnum">' + n + '</span>' : '') + '<h3>' + r[1] + '</h3>' + chip(r[0]) + '</div>' +
         '<p class="gain">' + r[2] + '</p>' +
         '<ul class="need-list">' + r[3].map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ul>' +
         ch + '</article>';
     }).join('');
+    addFilter(host, rows);
   }
 
   renderPlatform('platGoogle', 'google', true);
   renderPlatform('platYandex', 'yandex', false);
+  renderPlatform('platSeo', 'seo', false);
   renderPlatform('platMeta', 'meta', true);
   renderPlatform('platCrm', 'crm', false);
   renderPlatform('platFunnel', 'funnel', true);
@@ -691,6 +790,87 @@
     }).join('');
   }
 
+  /* ======================= SEO и GEO: выдача и нейросеть ======================= */
+
+  var SERP_NOTES = {
+    now: [['good', 'Описание под ссылкой уже наше — про вкус, а не случайный текст'],
+      ['bad', 'Адрес — номер товара, из него не понять, что за кофе'],
+      ['bad', 'Нет цены и наличия — человек не видит, что товар есть'],
+      ['bad', 'Нет оценки — нечем выделиться среди соседей']],
+    after: [['good', 'Адрес с названием кофе'],
+      ['good', 'Цена, вес и наличие прямо в результатах поиска'],
+      ['good', 'Звёзды — когда накопятся отзывы'],
+      ['good', 'Такой результат заметнее и чаще получает клик']]
+  };
+
+  var serp = $('serp');
+  var serpNotes = $('serpNotes');
+  var tgs = [].slice.call(document.querySelectorAll('.tg'));
+  var serpTimer = null;
+  var serpTouched = false;
+
+  function setSerp(v) {
+    if (!serp) return;
+    serp.dataset.v = v;
+    serp.classList.remove('swap');
+    void serp.offsetWidth;
+    serp.classList.add('swap');
+    tgs.forEach(function (t) {
+      t.classList.toggle('on', t.dataset.v === v);
+      t.setAttribute('aria-selected', t.dataset.v === v ? 'true' : 'false');
+    });
+    if (serpNotes) {
+      serpNotes.innerHTML = SERP_NOTES[v].map(function (n) {
+        return '<li class="' + (n[0] === 'good' ? 'good' : '') + '">' + n[1] + '</li>';
+      }).join('');
+    }
+  }
+
+  tgs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      serpTouched = true;
+      clearInterval(serpTimer);
+      setSerp(t.dataset.v);
+    });
+  });
+  setSerp('now');
+
+  function startSerpAuto() {
+    if (reduced || serpTouched || serpTimer) return;
+    serpTimer = setInterval(function () { setSerp(serp.dataset.v === 'now' ? 'after' : 'now'); }, 4200);
+  }
+
+  var AI_PARTS = [['', 'Например, '], ['b', 'Serikov Coffee'],
+    ['', ' — первая обжарочная в Казахстане, работает с 2009 года в Караганде. Кофе обжаривают на ростерах Giesen и Probat, доставляют по всему Казахстану, заказать можно на serikovcoffee.kz.']];
+  var AI_LEN = AI_PARTS.reduce(function (n, p) { return n + p[1].length; }, 0);
+  var ai = $('aiAnswer');
+  var aiTyped = false;
+
+  function aiHtml(count) {
+    var out = '';
+    var left = count;
+    AI_PARTS.forEach(function (p) {
+      if (left <= 0) return;
+      var t = p[1].slice(0, left);
+      left -= t.length;
+      out += p[0] ? '<' + p[0] + '>' + t + '</' + p[0] + '>' : t;
+    });
+    return out;
+  }
+
+  function typeAi() {
+    if (!ai || aiTyped) return;
+    aiTyped = true;
+    if (reduced) { ai.innerHTML = aiHtml(AI_LEN); return; }
+    var i = 0;
+    (function step() {
+      i = Math.min(i + 2, AI_LEN);
+      ai.innerHTML = aiHtml(i) + (i < AI_LEN ? '<span class="caret" aria-hidden="true"></span>' : '');
+      if (i < AI_LEN) setTimeout(step, 26);
+    })();
+  }
+  if (ai && reduced) typeAi();
+
   /* ======================= счётчики и появление ======================= */
 
   function countUp(el) {
@@ -714,6 +894,7 @@
     el.classList.add('in');
     [].slice.call(el.querySelectorAll('[data-count]')).forEach(countUp);
     if (el.id === 'roast') drawRoast();
+    if (el.classList.contains('seo-demo')) { startSerpAuto(); typeAi(); }
   }
 
   function sweep() {
