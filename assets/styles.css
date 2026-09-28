@@ -909,3 +909,44 @@ input[type="range"]:focus-visible { outline: 3px solid var(--ring); outline-offs
 
 @media (max-width: 1000px) { .gloss { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .gloss { grid-template-columns: 1fr; } }
+
+/* ---------- связки сервисов ---------- */
+
+.chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.chain-lbl { font-size: 13px; font-weight: 600; color: var(--muted); margin-right: 2px; }
+.chain .link {
+  font-size: 13px;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-alt);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.chain i { font-style: normal; color: var(--green); font-size: 13px; }
+.chain.wide { border-top: 0; padding-top: 0; gap: 8px; }
+.chain.wide .link { font-size: 14.5px; padding: 8px 14px; background: var(--panel); color: var(--ink); }
+.chain.wide i { font-size: 15px; }
+
+.bigchains { display: grid; gap: 16px; margin-top: 30px; }
+
+.bigchain {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 28px;
+  display: grid;
+  gap: 14px;
+}
+.bigchain h3 { font-size: 22px; }
+.bigchain .cnote { font-size: 15px; color: var(--ink-soft); }
+
+.chainline { margin-top: 26px; }
