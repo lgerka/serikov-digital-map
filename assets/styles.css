@@ -834,3 +834,59 @@ input[type="range"]:focus-visible { outline: 3px solid var(--ring); outline-offs
   .funnel { grid-template-columns: 1fr; }
   .calc-out { grid-template-columns: 1fr; }
 }
+
+/* ---------- карточки площадок ---------- */
+
+.plat { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 30px; }
+
+.pcard {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pcard-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.pcard-top h3 { font-size: 22px; flex: 1; min-width: 200px; }
+.pnum {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+}
+.pcard .gain { font-size: 15.5px; color: var(--ink-soft); }
+.pcard .need-list {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+}
+.pcard .need-list li { padding-left: 20px; position: relative; }
+.pcard .need-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: .6em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--green);
+  opacity: .6;
+}
+
+/* ---------- как появится магазин ---------- */
+
+.shop { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 20px; }
+
+@media (max-width: 1000px) {
+  .plat { grid-template-columns: 1fr; }
+  .shop { grid-template-columns: 1fr; }
+  .shop .flow-step::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -15px; transform: translateX(-50%); }
+}
