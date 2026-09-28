@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital-карта Serikov Coffee</title>
+<meta name="description" content="Интерактивная карта развития сайта Serikov Coffee: аудит, шесть направлений работ, план на три месяца и граница между digital-маркетингом и контентом.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- ARTIFACT-START -->
+<script>document.documentElement.classList.add('js');</script>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Serikov <span>digital</span></div>
+    <nav>
+      <a href="#map">Карта работ</a>
+      <a href="#audit">Аудит</a>
+      <a href="#plan">План</a>
+      <a href="#scope">Что такое digital</a>
+      <a href="#needs">Что нужно</a>
+    </nav>
+    <button class="theme-btn" id="theme" type="button" aria-label="Переключить тему">◐</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow reveal">Serikov Coffee · сентябрь 2026</p>
+    <h1 class="reveal">Сайт запущен. Дальше — считать и приводить людей</h1>
+    <p class="lead reveal">Интерактивная карта работ по serikovcoffee.kz: что показал аудит, какие шесть направлений закрываем и где проходит граница между digital-маркетингом и контентом.</p>
+    <div class="hero-actions reveal">
+      <a class="btn" href="#map">Открыть карту работ</a>
+      <a class="btn ghost" href="#scope">Что входит в digital-маркетинг</a>
+    </div>
+    <p class="hero-meta reveal">Данные сняты с боевой базы магазина и проверкой сайта 27 сентября 2026 года</p>
+  </div>
+</section>
+
+<section class="alt" id="now">
+  <div class="wrap">
+    <p class="eyebrow reveal">Где мы сейчас</p>
+    <h2 class="h2 reveal">Магазин работает на своём домене с 24 сентября</h2>
+    <div class="stats reveal" style="margin-top:32px">
+      <div class="stat"><div class="num" data-count="212">212</div><p>товаров в каталоге</p></div>
+      <div class="stat"><div class="num" data-count="7894">7 894</div><p>клиента в базе сайта</p></div>
+      <div class="stat"><div class="num" data-count="16">16</div><p>заказов за первые четыре дня</p></div>
+      <div class="stat warn"><div class="num" data-count="0">0</div><p>счётчиков и пикселей на сайте</p></div>
+    </div>
+    <p class="note reveal">Четыре заказа из шестнадцати оплачены картой — <b>75 195 ₸</b>. Это без единого тенге рекламы. Откуда пришли эти покупатели, мы не знаем: измерять пока нечем.</p>
+  </div>
+</section>
+
+<section id="map">
+  <div class="wrap">
+    <p class="eyebrow reveal">Карта работ</p>
+    <h2 class="h2 reveal">Шесть направлений. Нажмите на любое</h2>
+    <p class="lead reveal">Порядок не случайный: сначала измерение и данные, потом реклама. SEO, конверсия и скорость идут параллельно.</p>
+
+    <div class="stage-outer reveal">
+      <div class="stage" id="stage">
+        <svg id="links" aria-hidden="true"></svg>
+        <div class="core">
+          <strong>serikovcoffee.kz</strong>
+          <span>212 товаров · 7 894 клиента<br>16 заказов за 4 дня</span>
+        </div>
+        <button class="node on" type="button" data-key="analytics" style="--x:50%; --y:12%">
+          <span class="idx">01</span>
+          <span class="ttl">Аналитика и данные</span>
+          <span class="sub">Метрика, GA4, сквозная аналитика</span>
+        </button>
+        <button class="node" type="button" data-key="pixels" style="--x:82%; --y:31%">
+          <span class="idx">02</span>
+          <span class="ttl">Пиксели и аудитории</span>
+          <span class="sub">Meta, TikTok, Google, look-alike</span>
+        </button>
+        <button class="node" type="button" data-key="ads" style="--x:82%; --y:69%">
+          <span class="idx">03</span>
+          <span class="ttl">Реклама и трафик</span>
+          <span class="sub">Таргет, поиск, ретаргет</span>
+        </button>
+        <button class="node" type="button" data-key="seo" style="--x:50%; --y:88%">
+          <span class="idx">04</span>
+          <span class="ttl">SEO и гео</span>
+          <span class="sub">Разметка, карты, города</span>
+        </button>
+        <button class="node" type="button" data-key="conv" style="--x:18%; --y:69%">
+          <span class="idx">05</span>
+          <span class="ttl">Конверсия сайта</span>
+          <span class="sub">«Спасибо», отзывы, корзина</span>
+        </button>
+        <button class="node" type="button" data-key="speed" style="--x:18%; --y:31%">
+          <span class="idx">06</span>
+          <span class="ttl">Скорость и техника</span>
+          <span class="sub">Сборка, картинки, кеш</span>
+        </button>
+      </div>
+
+      <div class="detail" id="detail" aria-live="polite">
+        <div class="detail-head">
+          <span class="tag">Направление 01</span>
+          <h3>Аналитика и данные</h3>
+        </div>
+        <p class="why">Сейчас на сайте нет ни одного счётчика: заказ приходит, и мы не знаем, из какого канала он пришёл и сколько стоил.</p>
+        <ul class="items">
+          <li><span class="chip no">нет</span><span>Яндекс Метрика: цели, Вебвизор, карта кликов</span></li>
+          <li><span class="chip no">нет</span><span>Google Analytics 4: события и электронная торговля</span></li>
+          <li><span class="chip no">нет</span><span>Сквозная аналитика в Битрикс24 по UTM</span></li>
+          <li><span class="chip no">нет</span><span>UTM-метки на все ссылки и QR в кофейнях</span></li>
+          <li><span class="chip no">нет</span><span>Search Console и Яндекс Вебмастер</span></li>
+          <li><span class="chip no">нет</span><span>Отчёт раз в месяц: заказы, выручка, стоимость покупателя</span></li>
+        </ul>
+        <p class="gives"><b>Что это даёт:</b> видно, какой канал приносит оплаченные заказы, и можно отключать то, что не окупается.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="audit">
+  <div class="wrap">
+    <p class="eyebrow reveal">Аудит 27 сентября</p>
+    <h2 class="h2 reveal">Что нашла проверка сайта</h2>
+    <p class="lead reveal">Семь находок. Каждая раскрывается: чем мешает продажам и что с ней делаем.</p>
+    <div class="acc reveal" id="acc"></div>
+    <p class="good reveal">Что уже хорошо: свои заголовки и описания разделов, карта сайта на 138 адресов, 192 редиректа со старого сайта, закрытые от поиска корзина и оформление, правильный ответ на несуществующих страницах, gzip и HTTP/2.</p>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <p class="eyebrow reveal">План</p>
+    <h2 class="h2 reveal">Три шага до первой рекламы</h2>
+    <p class="lead reveal">Шаги 1 и 2 идут параллельно. Реклама включается только после них — иначе бюджет платит за трафик, который мы не считаем.</p>
+    <div class="steps reveal">
+      <div class="step">
+        <p class="when">Шаг 1 · две недели</p>
+        <h3>Начинаем видеть</h3>
+        <ul>
+          <li>Метрика и GA4 с целями</li>
+          <li>Пиксели Meta, TikTok, Google</li>
+          <li>События воронки и покупки</li>
+          <li>Страница «Спасибо за заказ»</li>
+          <li>Search Console и Вебмастер</li>
+        </ul>
+      </div>
+      <div class="step">
+        <p class="when">Шаг 2 · месяц</p>
+        <h3>Готовим витрину</h3>
+        <ul>
+          <li>Микроразметка и описания карточек</li>
+          <li>Понятные адреса товаров</li>
+          <li>Товарный фид для рекламы</li>
+          <li>Отзывы и скорость</li>
+          <li>Карты и страницы городов</li>
+        </ul>
+      </div>
+      <div class="step">
+        <p class="when">Шаг 3 · месяцы 2–3</p>
+        <h3>Включаем трафик</h3>
+        <ul>
+          <li>Тесты Meta, TikTok, Google</li>
+          <li>Ретаргет и похожие аудитории</li>
+          <li>Отчёт по окупаемости связок</li>
+          <li>Масштабируем то, что окупается</li>
+          <li>Выключаем то, что нет</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="scope">
+  <div class="wrap">
+    <p class="eyebrow reveal">Зона ответственности</p>
+    <h2 class="h2 reveal">Что такое digital-маркетинг и где он заканчивается</h2>
+    <p class="lead reveal">Digital-маркетинг — это управление спросом и продажами в интернете: трафик → сайт → заказ → повторная покупка. Предмет работы — цифры на этом пути, а не публикации. Внутри digital два разных контура, и это разные профессии.</p>
+
+    <div class="contours reveal">
+      <div class="contour mine">
+        <p class="kicker">Контур 1 · performance и данные — это я</p>
+        <h3>Спрос, сайт и деньги</h3>
+        <ul>
+          <li>Сайт и каталог как торговая точка: карточки, оформление, оплата, доставка</li>
+          <li>Реклама: контекст, таргет, ретаргет, бюджеты и ставки</li>
+          <li>Аналитика: счётчики, события, сквозная аналитика, отчёты</li>
+          <li>SEO и карты: поиск, микроразметка, гео</li>
+          <li>CRM-маркетинг: база, сегменты, письма, лояльность</li>
+          <li>Тексты, которые продают: объявления, посадочные, письма, карточки</li>
+        </ul>
+        <p class="kpi"><b>Меряется:</b> заказы, стоимость заказа, выручка из интернета, окупаемость рекламы.</p>
+      </div>
+      <div class="contour">
+        <p class="kicker">Контур 2 · контент и бренд — это SMM</p>
+        <h3>Голос и лицо бренда</h3>
+        <ul>
+          <li>Ведение аккаунтов: рубрикатор, контент-план, публикации</li>
+          <li>Идеи для съёмок и сами съёмки: рилсы, сторис, фото</li>
+          <li>Монтаж, обложки, оформление профиля</li>
+          <li>Общение: комментарии, директ, отработка негатива</li>
+          <li>Блогеры и коллаборации</li>
+          <li>Тон бренда и визуальный стиль в ленте</li>
+        </ul>
+        <p class="kpi"><b>Меряется:</b> охват, вовлечение, подписчики, упоминания, сохранения.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:38px; font-size:24px" class="reveal">Где мы стыкуемся</h3>
+    <div class="flow reveal">
+      <div class="flow-step"><b>1. Я даю задание</b>Аудитория, оффер, формат, площадка и что должно быть в кадре</div>
+      <div class="flow-step"><b>2. Контент снимает</b>Съёмка, монтаж, тексты в стиле бренда</div>
+      <div class="flow-step"><b>3. Я запускаю</b>Ставлю креатив в кампании, слежу за ставками и бюджетом</div>
+      <div class="flow-step"><b>4. Возвращаю цифры</b>Какой ролик принёс заказы и по какой цене — под следующую съёмку</div>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table>
+        <tr><th style="width:44%">Задача</th><th style="width:28%">Кто ведёт</th><th style="width:28%">Кто помогает</th></tr>
+        <tr><td class="who">Сайт, каталог, оплата и доставка</td><td class="me">Digital</td><td>Разработка</td></tr>
+        <tr><td class="who">Реклама и рекламный бюджет</td><td class="me">Digital</td><td>Контент — креативы</td></tr>
+        <tr><td class="who">Аналитика и отчёты по выручке</td><td class="me">Digital</td><td>—</td></tr>
+        <tr><td class="who">SEO, карты, страницы городов</td><td class="me">Digital</td><td>Контент — тексты</td></tr>
+        <tr><td class="who">Письма и работа с базой клиентов</td><td class="me">Digital</td><td>Контент — стиль писем</td></tr>
+        <tr><td class="who">Идеи для съёмок и съёмки рилсов</td><td class="them">Контент и SMM</td><td class="both">Digital — задание под кампанию</td></tr>
+        <tr><td class="who">Ведение Instagram и публикации</td><td class="them">Контент и SMM</td><td>—</td></tr>
+        <tr><td class="who">Ответы в директе и комментариях</td><td class="them">Контент и SMM</td><td>Продажи — заявки в CRM</td></tr>
+        <tr><td class="who">Блогеры и посевы</td><td class="them">Контент и SMM</td><td class="both">Digital — метки и замер</td></tr>
+      </table>
+    </div>
+
+    <div class="pull reveal">
+      <b>Короткая формулировка для руководителя:</b> я отвечаю за то, сколько людей пришло на сайт, сколько из них купили и по какой цене. За то, что мы снимаем и публикуем в Instagram, отвечает контент-направление. Я говорю, какой креатив нужен под кампанию, и показываю цифрами, какой из них принёс заказы.
+    </div>
+
+    <p class="note reveal" style="margin-top:26px">Почему это не стоит смешивать: съёмка и ведение аккаунта — это производство, оно съедает целые дни. Настройка аналитики, рекламы и сайта — другая работа и другие инструменты. Когда один человек делает всё сразу, реклама не оптимизируется, а контент выходит рывками — и обе части дают меньше, чем могли бы.</p>
+  </div>
+</section>
+
+<section id="needs">
+  <div class="wrap">
+    <p class="eyebrow reveal">Что нужно от компании</p>
+    <h2 class="h2 reveal">Чтобы начать, нужны три вещи</h2>
+    <div class="needs reveal">
+      <div class="need">
+        <h3>Доступы</h3>
+        <ul>
+          <li>Рекламные кабинеты Meta и TikTok, оформленные на компанию</li>
+          <li>Аккаунт Google для Ads, Analytics и Search Console</li>
+          <li>Права на карточки в 2ГИС, Яндекс и Google Картах</li>
+        </ul>
+      </div>
+      <div class="need">
+        <h3>Решения</h3>
+        <ul>
+          <li>Чем награждаем за отзыв: скидкой или баллами</li>
+          <li>Кто отвечает на отзывы на картах в течение суток</li>
+        </ul>
+      </div>
+      <div class="need">
+        <h3>Ресурсы</h3>
+        <ul>
+          <li>Тестовый бюджет на рекламу — платится площадкам напрямую</li>
+          <li>Съёмка под вертикальное видео для таргета</li>
+          <li>Фото точек для карточек на картах</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Serikov Coffee · карта развития digital</span>
+    <span>Данные сайта и базы на 27.09.2026</span>
+    <span>Внутренний документ компании</span>
+  </div>
+</footer>
+<!-- ARTIFACT-END -->
+<script src="assets/app.js"></script>
+</body>
+</html>
