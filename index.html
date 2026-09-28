@@ -5,81 +5,109 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Digital-карта Serikov Coffee</title>
-<meta name="description" content="Что подключаем Serikov Coffee: счётчики, реклама и магазин в Google, Яндексе и Facebook, рассылки и ведение Битрикса — простыми словами.">
+<meta name="description" content="Что подключаем Serikov Coffee: счётчики, реклама и магазин в Google, Яндексе и Facebook, сквозная аналитика, рассылки и сопровождение сайта — простыми словами.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Caveat:wght@600&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <!-- ARTIFACT-START -->
 <script>document.documentElement.classList.add('js');</script>
-<header class="top">
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="top" id="top">
   <div class="wrap">
     <div class="brand">Serikov <span>digital</span></div>
-    <nav>
-      <a href="#plan2">План</a>
+    <nav aria-label="Разделы">
+      <a href="#plan">План</a>
       <a href="#map">Карта</a>
+      <a href="#chains">Связки</a>
       <a href="#google">Google</a>
       <a href="#yandex">Яндекс</a>
       <a href="#meta">Facebook</a>
       <a href="#crm">Рассылки</a>
       <a href="#funnel">Сквозная аналитика</a>
       <a href="#support">Сопровождение</a>
-      <a href="#role">Моя роль</a>
+      <a href="#role">Роль</a>
       <a href="#words">Словарь</a>
     </nav>
     <button class="theme-btn" id="theme" type="button" aria-label="Переключить тему">◐</button>
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-ring" aria-hidden="true"></div>
+<section class="hero" id="hero">
+  <div class="glow a" aria-hidden="true"></div>
+  <div class="glow b" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow reveal">Serikov Coffee · сентябрь 2026</p>
-    <h1 class="reveal">Что подключаем: Google, Яндекс, Facebook</h1>
-    <p class="lead reveal">Сайт продаёт, но ни одна система пока об этом не знает. Здесь по пунктам и простыми словами: что подключаем на каждой площадке, что это даёт компании и в каком порядке идём. Незнакомые слова разобраны в словаре внизу страницы.</p>
-    <div class="hero-actions reveal">
+    <h1 class="h1" id="h1">Что подключаем: Google, Яндекс, Facebook</h1>
+    <p class="lead reveal">Сайт продаёт, но ни одна система пока об этом не знает. Здесь по пунктам и простыми словами: что подключаем на каждой площадке, что это даёт компании и в каком порядке идём.</p>
+    <div class="actions reveal">
       <a class="btn" href="#map">Карта подключений</a>
       <a class="btn ghost" href="#words">Словарь простыми словами</a>
     </div>
-    <p class="hero-meta reveal">Данные сайта и базы — 27.09.2026, рекламный кабинет — 28.09.2026</p>
+    <div class="hero-chain" id="heroChain" aria-label="Путь одного заказа: реклама, метка в ссылке, сайт, заказ, CRM, оплата, отчёт"></div>
+    <p class="hero-cap reveal">Путь одного заказа проходит через семь систем. Сейчас связи между ними нет — её мы и строим.</p>
   </div>
 </section>
 
-<section class="alt" id="now">
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<section class="sec" id="now">
   <div class="wrap">
     <p class="eyebrow reveal">Где мы сейчас</p>
     <h2 class="h2 reveal">Магазин работает на своём домене с 24 сентября</h2>
-    <div class="stats reveal" style="margin-top:32px">
-      <div class="stat"><div class="num" data-count="212">212</div><p>товаров в каталоге</p></div>
-      <div class="stat"><div class="num" data-count="7894">7 894</div><p>клиента в базе сайта</p></div>
-      <div class="stat"><div class="num" data-count="16">16</div><p>заказов за первые четыре дня</p></div>
-      <div class="stat warn"><div class="num" data-count="0">0</div><p>счётчиков на сайте</p></div>
+    <div class="stats stagger">
+      <div class="stat" style="--i:0"><div class="num" data-count="212">212</div><p>товаров в каталоге</p></div>
+      <div class="stat" style="--i:1"><div class="num" data-count="7894">7 894</div><p>клиента в базе сайта</p></div>
+      <div class="stat" style="--i:2"><div class="num" data-count="16">16</div><p>заказов за первые четыре дня</p></div>
+      <div class="stat warn" style="--i:3"><div class="num" data-count="0">0</div><p>счётчиков на сайте</p></div>
     </div>
     <p class="note reveal">Четыре заказа из шестнадцати оплачены картой — <b>75 195 ₸</b>. Это без единого тенге рекламы. Откуда пришли эти покупатели, мы не знаем: на сайте не стоит ни один счётчик, считать нечем.</p>
   </div>
 </section>
 
-<section id="plan2">
+<section class="sec dark" id="plan">
   <div class="wrap">
     <p class="eyebrow reveal">План на первый месяц</p>
     <h2 class="h2 reveal">Две линии работ идут одновременно</h2>
-    <p class="lead reveal">Не «сначала всё настроим, потом реклама». Пока подключаются счётчики и магазин, первая реклама уже собирает данные и живых покупателей. Нажмите на линию, чтобы увидеть её по неделям.</p>
+    <p class="lead reveal">Как профиль обжарки: зелёная кривая — настройка и подключения, бордовая — первая реклама. Сначала растёт настройка, к четвёртой неделе реклама её догоняет. Нажмите на неделю, чтобы увидеть, что происходит на обеих линиях.</p>
 
-    <div class="tabs reveal" role="tablist" aria-label="Линии работ">
-      <button class="tab-btn on" type="button" role="tab" aria-selected="true" data-track="a">Линия 1 · настройка и подключения</button>
-      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-track="b">Линия 2 · первая реклама</button>
+    <div class="roast reveal" id="roast">
+      <div class="roast-chart">
+        <div class="bands" id="bands" role="tablist" aria-label="Недели плана"></div>
+        <svg class="roast-svg" id="roastSvg" viewBox="0 0 1000 380" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="fill1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#43C07F" stop-opacity=".22"/>
+              <stop offset="1" stop-color="#43C07F" stop-opacity="0"/>
+            </linearGradient>
+            <clipPath id="rclip"><rect id="rclipRect" x="0" y="0" width="1000" height="380"/></clipPath>
+          </defs>
+          <g clip-path="url(#rclip)">
+          <path class="area" fill="url(#fill1)" d="M 0 250 C 60 330, 140 335, 200 312 C 320 272, 420 205, 560 155 C 700 110, 860 86, 1000 70 L 1000 380 L 0 380 Z"/>
+          <path class="c c1" id="curve1" d="M 0 250 C 60 330, 140 335, 200 312 C 320 272, 420 205, 560 155 C 700 110, 860 86, 1000 70"/>
+          <path class="c c2" id="curve2" d="M 0 342 C 160 344, 300 330, 420 296 C 560 250, 640 176, 760 116 C 860 72, 940 52, 1000 44"/>
+          </g>
+        </svg>
+        <span class="mark" id="mark1"></span>
+        <span class="mark b" id="mark2"></span>
+        <p class="roast-note">как в обжарке: без сушки не будет крэка</p>
+      </div>
+      <div class="legend"><span><i></i>Линия 1 · настройка и подключения</span><span><i class="b"></i>Линия 2 · первая реклама</span></div>
+      <div class="roast-detail" id="roastDetail" aria-live="polite"></div>
     </div>
-    <div class="track" id="track"></div>
   </div>
 </section>
 
-<section class="alt" id="map">
+<section class="sec" id="map">
   <div class="wrap">
     <p class="eyebrow reveal">Карта подключений</p>
     <h2 class="h2 reveal">Шесть узлов. Нажмите на любой</h2>
-    <p class="lead reveal">Сайт в середине: он сообщает, что на нём происходит, и отдаёт список товаров. Все остальные системы живут на этих данных. Подробности по каждой — в разделах ниже.</p>
+    <p class="lead reveal">Сайт в середине: он сообщает, что на нём происходит, и отдаёт список товаров. По линиям бегут зёрна — так данные идут от сайта к остальным системам. Подробности по каждой — в разделах ниже.</p>
 
     <div class="stage-outer reveal">
       <div class="stage" id="stage">
@@ -89,125 +117,122 @@
           <span>212 товаров · 7 894 клиента<br>сообщения и список товаров</span>
         </div>
         <button class="node on" type="button" data-key="site" style="--x:50%; --y:12%">
-          <span class="idx">01</span>
+          <span class="cat">Основа</span>
           <span class="ttl">Сайт</span>
           <span class="sub">Сообщения о заказах и выгрузка товаров</span>
         </button>
         <button class="node" type="button" data-key="google" style="--x:82%; --y:31%">
-          <span class="idx">02</span>
+          <span class="cat">Поиск и реклама</span>
           <span class="ttl">Google</span>
           <span class="sub">Счётчик, поиск, товары, реклама</span>
         </button>
         <button class="node" type="button" data-key="yandex" style="--x:82%; --y:69%">
-          <span class="idx">03</span>
+          <span class="cat">Поиск и реклама</span>
           <span class="ttl">Яндекс</span>
           <span class="sub">Метрика, Вебмастер, Директ, Карты</span>
         </button>
         <button class="node" type="button" data-key="meta" style="--x:50%; --y:88%">
-          <span class="idx">04</span>
+          <span class="cat">Соцсети и магазин</span>
           <span class="ttl">Facebook и Instagram</span>
           <span class="sub">Счётчик, каталог, магазин</span>
         </button>
         <button class="node" type="button" data-key="crm" style="--x:18%; --y:69%">
-          <span class="idx">05</span>
+          <span class="cat">Своя база</span>
           <span class="ttl">Рассылки и Битрикс</span>
           <span class="sub">WhatsApp, письма, CRM</span>
         </button>
         <button class="node" type="button" data-key="report" style="--x:18%; --y:31%">
-          <span class="idx">06</span>
+          <span class="cat">Итог</span>
           <span class="ttl">Отчётность</span>
           <span class="sub">Один экран с цифрами</span>
         </button>
       </div>
-
       <div class="detail" id="detail" aria-live="polite"></div>
     </div>
   </div>
 </section>
 
-
-<section id="chains">
+<section class="sec alt" id="chains">
   <div class="wrap">
     <p class="eyebrow reveal">Как это устроено</p>
     <h2 class="h2 reveal">Почему каждый пункт — это не одна кнопка</h2>
-    <p class="lead reveal">Ни одно подключение не живёт само по себе. Каждое — цепочка из нескольких систем: сайт, 1С, банк, CRM, кабинеты площадок. Работа состоит в том, чтобы свести звенья вместе и проверить каждый стык: если рвётся одно звено, молча перестаёт работать вся цепочка.</p>
+    <p class="lead reveal">Ни одно подключение не живёт само по себе. Каждое — цепочка из нескольких систем: сайт, 1С, банк, CRM, кабинеты площадок. Работа в том, чтобы свести звенья вместе и проверить каждый стык: если рвётся одно звено, молча перестаёт работать вся цепочка.</p>
     <div class="bigchains reveal" id="bigchains"></div>
   </div>
 </section>
 
-<section class="alt" id="google">
+<section class="sec" id="google">
   <div class="wrap">
     <p class="eyebrow reveal">Площадка 1</p>
     <h2 class="h2 reveal">Google: что подключаем и что это даёт</h2>
-    <p class="lead reveal">Восемь подключений. Первые четыре нужны и для рекламы, и для бесплатного поиска — с них начинаем. Остальные включаются, когда накопятся данные.</p>
-    <div class="plat reveal" id="platGoogle"></div>
+    <p class="lead reveal">Восемь подключений. Номер — порядок: первые четыре нужны и для рекламы, и для бесплатного поиска, с них начинаем. Остальные включаются, когда накопятся данные.</p>
+    <div class="plat stagger" id="platGoogle"></div>
   </div>
 </section>
 
-<section id="yandex">
+<section class="sec alt" id="yandex">
   <div class="wrap">
     <p class="eyebrow reveal">Площадка 2</p>
     <h2 class="h2 reveal">Яндекс: что подключаем и что это даёт</h2>
     <p class="lead reveal">Метрика показывает поведение покупателя подробнее, чем Google: можно посмотреть запись экрана и увидеть, куда люди нажимают. Плюс Карты и Директ — отдельный источник заказов в Казахстане.</p>
-    <div class="plat reveal" id="platYandex"></div>
+    <div class="plat stagger" id="platYandex"></div>
   </div>
 </section>
 
-<section class="alt" id="meta">
+<section class="sec" id="meta">
   <div class="wrap">
     <p class="eyebrow reveal">Площадка 3</p>
     <h2 class="h2 reveal">Facebook и Instagram: от счётчика до магазина</h2>
     <p class="lead reveal">Здесь самая большая работа — и самая заметная: у бренда появляется магазин с товарами прямо в Facebook и Instagram, а каждая карточка товара ведёт в наш каталог на сайте.</p>
 
-    <h3 class="sub-h reveal" style="margin-top:34px">Как появится магазин, привязанный к сайту</h3>
-    <div class="shop reveal" id="shop"></div>
+    <h3 class="sub-h reveal" style="margin-top:38px">Как появится магазин, привязанный к сайту</h3>
+    <div class="shop stagger" id="shop"></div>
 
-    <h3 class="sub-h reveal" style="margin-top:44px">Что подключаем в кабинете</h3>
-    <div class="plat reveal" id="platMeta"></div>
+    <h3 class="sub-h reveal" style="margin-top:48px">Что подключаем в кабинете</h3>
+    <div class="plat stagger" id="platMeta"></div>
 
-    <h3 class="sub-h reveal" style="margin-top:44px">Что уже есть в кабинете — проверка 28 сентября</h3>
-    <div class="fb-grid reveal" id="fbGrid"></div>
+    <h3 class="sub-h reveal" style="margin-top:48px">Что уже есть в кабинете — проверка 28 сентября</h3>
+    <div class="fb-grid stagger" id="fbGrid"></div>
   </div>
 </section>
 
-<section id="crm">
+<section class="sec alt" id="crm">
   <div class="wrap">
     <p class="eyebrow reveal">Своя база и своя система</p>
     <h2 class="h2 reveal">Рассылки, письма и ведение Битрикса</h2>
-    <p class="lead reveal">Самый дешёвый покупатель — тот, кто у нас уже покупал: за него не надо платить площадке. В базе 7 894 человека, и с ними почти не работают. Плюс сам Битрикс — сайт и CRM в одной системе — кто-то должен вести каждый день.</p>
-    <div class="plat reveal" id="platCrm"></div>
+    <p class="lead reveal">Самый дешёвый покупатель — тот, кто у нас уже покупал: за него не надо платить площадке. В базе 7 894 человека, и с ними почти не работают. Плюс сам Битрикс — сайт и CRM в одной системе — его нужно вести каждый день.</p>
+    <div class="plat stagger" id="platCrm"></div>
   </div>
 </section>
 
-
-<section class="alt" id="funnel">
+<section class="sec" id="funnel">
   <div class="wrap">
     <p class="eyebrow reveal">Отдельная большая задача</p>
     <h2 class="h2 reveal">Сквозная аналитика: видеть путь денег целиком</h2>
     <p class="lead reveal">Сейчас реклама считает клики, сайт — визиты, CRM — заказы, банк — оплаты. Четыре системы, и ни одна не знает про другую. Сквозная аналитика связывает их в одну строчку: из какой рекламы пришёл человек, что заказал, оплатил ли и сколько принёс компании.</p>
     <div class="chainline reveal" id="funnelChain"></div>
-    <div class="plat reveal" id="platFunnel"></div>
+    <div class="plat stagger" id="platFunnel"></div>
     <p class="note reveal">Тонкость: часть людей пишет в WhatsApp или звонит, и тогда источник теряется. Поэтому метки ставятся не только в рекламе, но и в рассылках, в подписи профиля и в QR-кодах в кофейнях.</p>
   </div>
 </section>
 
-<section id="support">
+<section class="sec alt" id="support">
   <div class="wrap">
     <p class="eyebrow reveal">Каждый день</p>
     <h2 class="h2 reveal">Правки, тюнинг и сопровождение сайта</h2>
-    <p class="lead reveal">Сайт — не законченный проект, а работающий магазин: цены меняются, товары заканчиваются, появляются акции, что-то ломается. Это отдельный постоянный поток работы, который идёт параллельно всем подключениям.</p>
-    <div class="plat reveal" id="platSupport"></div>
+    <p class="lead reveal">Сайт — не законченный проект, а работающий магазин: цены меняются, товары заканчиваются, появляются акции, что-то ломается. Разработчика в штате нет — всё это делается своими силами, параллельно с подключениями.</p>
+    <div class="plat stagger" id="platSupport"></div>
   </div>
 </section>
 
-<section class="alt" id="role">
+<section class="sec" id="role">
   <div class="wrap">
     <p class="eyebrow reveal">Должность</p>
     <h2 class="h2 reveal">Digital и performance: что это за два слова</h2>
     <p class="lead reveal">Название роли состоит из двух частей, и каждая отвечает за своё. Вместе получается человек, который держит всю дорогу от показа рекламы до денег в кассе.</p>
 
-    <div class="contours reveal">
-      <div class="contour mine">
+    <div class="contours stagger">
+      <div class="contour" style="--i:0">
         <p class="kicker">Первая часть</p>
         <h3>Digital — всё, что у компании есть в интернете</h3>
         <ul>
@@ -215,10 +240,11 @@
           <li>Подключения: счётчики, кабинеты, каталоги, магазин в соцсетях</li>
           <li>База клиентов и рассылки: WhatsApp и письма</li>
           <li>Битрикс: сайт и CRM в одной системе, доступы, обновления, копии</li>
+          <li>Доработки сайта своими силами — без подрядчика</li>
         </ul>
         <p class="kpi"><b>Проще говоря:</b> чтобы всё работало, было связано между собой и принадлежало компании.</p>
       </div>
-      <div class="contour mine">
+      <div class="contour b" style="--i:1">
         <p class="kicker">Вторая часть</p>
         <h3>Performance — реклама, которую считают деньгами</h3>
         <ul>
@@ -238,9 +264,10 @@
     <div class="table-wrap reveal">
       <table>
         <tr><th style="width:46%">Что на мне</th><th style="width:54%">Чем это меряется</th></tr>
-        <tr><td class="who">Сайт и каталог</td><td>Скорость, доля посетителей, дошедших до заказа</td></tr>
+        <tr><td class="who">Сайт, правки и доработки</td><td>Скорость, доля посетителей, дошедших до заказа</td></tr>
         <tr><td class="who">Подключения и счётчики</td><td>Данные собираются без потерь, отчёты сходятся</td></tr>
         <tr><td class="who">Реклама и бюджет</td><td>Количество заказов и цена одного заказа</td></tr>
+        <tr><td class="who">Сквозная аналитика</td><td>Видно, какой источник принёс оплаченные заказы</td></tr>
         <tr><td class="who">Рассылки и база клиентов</td><td>Повторные покупки и выручка с базы</td></tr>
         <tr><td class="who">Ведение Битрикса</td><td>Сайт и CRM работают, заказы доходят до менеджеров</td></tr>
         <tr><td class="who">Отчётность</td><td>Выручка из интернета и окупаемость рекламы</td></tr>
@@ -249,21 +276,21 @@
   </div>
 </section>
 
-<section id="words">
+<section class="sec alt" id="words">
   <div class="wrap">
     <p class="eyebrow reveal">Словарь</p>
     <h2 class="h2 reveal">Слова, которые встречаются в этом документе</h2>
     <p class="lead reveal">Короткие объяснения без технического языка — чтобы на встрече все понимали одно и то же.</p>
-    <div class="gloss reveal" id="gloss"></div>
+    <div class="gloss stagger" id="gloss"></div>
   </div>
 </section>
 
-<section class="alt" id="needs">
+<section class="sec" id="needs">
   <div class="wrap">
     <p class="eyebrow reveal">Что нужно от компании</p>
     <h2 class="h2 reveal">Доступы есть. Нужны решения и бюджет</h2>
-    <div class="needs reveal">
-      <div class="need">
+    <div class="needs stagger">
+      <div class="need" style="--i:0">
         <h3>Решения</h3>
         <ul>
           <li>В каком рекламном кабинете работаем — предлагаю CoffeeOnline, у него привязана оплата</li>
@@ -271,14 +298,14 @@
           <li>Кто отвечает на отзывы на Картах в течение суток</li>
         </ul>
       </div>
-      <div class="need">
+      <div class="need" style="--i:1">
         <h3>Бюджет</h3>
         <ul>
           <li>Тестовый бюджет на первый месяц — платится площадке напрямую</li>
           <li>Цена заказа, при которой реклама считается удачной</li>
         </ul>
       </div>
-      <div class="need">
+      <div class="need" style="--i:2">
         <h3>Материалы</h3>
         <ul>
           <li>Фото товаров для каталога — часть уже есть на сайте</li>
@@ -291,7 +318,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <span>Serikov Coffee · карта подключений</span>
+    <span class="stamp">Roasted in Karaganda · since 2009</span>
     <span>Сайт и база — 27.09.2026, рекламный кабинет — 28.09.2026</span>
     <span>Внутренний документ компании</span>
   </div>
