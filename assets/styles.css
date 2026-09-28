@@ -890,3 +890,22 @@ input[type="range"]:focus-visible { outline: 3px solid var(--ring); outline-offs
   .shop { grid-template-columns: 1fr; }
   .shop .flow-step::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -15px; transform: translateX(-50%); }
 }
+
+/* ---------- словарь ---------- */
+
+.gloss { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+
+.gcard {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 22px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+.gcard h4 { margin: 0; font-family: 'Oswald', Arial, sans-serif; font-size: 19px; font-weight: 600; color: var(--ink); }
+.gcard p { font-size: 15px; color: var(--ink-soft); }
+
+@media (max-width: 1000px) { .gloss { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .gloss { grid-template-columns: 1fr; } }
