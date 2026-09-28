@@ -614,3 +614,223 @@ td.both { color: var(--amber); }
   }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ======================= вторая версия: интерактив ======================= */
+
+.sub-h { font-size: clamp(21px, 2.4vw, 28px); margin-top: 8px; }
+
+/* ---------- треки стратегии ---------- */
+
+.tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+
+.tab-btn {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink-soft);
+  font: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color .25s var(--ease), color .25s var(--ease), background .25s var(--ease);
+}
+.tab-btn:hover { border-color: var(--green); color: var(--ink); }
+.tab-btn.on { background: var(--green); border-color: var(--green); color: var(--on-accent); }
+.tab-btn:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+
+.track { margin-top: 22px; display: grid; gap: 12px; }
+
+.wk {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: 16px;
+  padding: 20px 22px;
+  animation: pop .5s var(--ease) both;
+}
+.track.b .wk { border-left-color: var(--burgundy); }
+.wk .when {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.track.b .wk .when { color: var(--burgundy); }
+.wk h4 { margin: 0 0 6px; font-family: 'Oswald', Arial, sans-serif; font-size: 20px; font-weight: 600; }
+.wk p { font-size: 15.5px; color: var(--ink-soft); }
+
+/* ---------- кабинет Facebook ---------- */
+
+.fb-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+
+.fb-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fb-card .row { display: flex; align-items: center; gap: 10px; }
+.fb-card .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; background: var(--green); }
+.fb-card.warn .dot { background: var(--amber); }
+.fb-card.bad .dot { background: var(--burgundy); }
+.fb-card h4 { margin: 0; font-family: 'Oswald', Arial, sans-serif; font-size: 19px; font-weight: 600; }
+.fb-card .val { font-size: 15.5px; color: var(--ink-soft); }
+.fb-card .act { font-size: 14.5px; color: var(--ink); border-top: 1px solid var(--line); padding-top: 10px; margin-top: 4px; }
+.fb-card .act b { color: var(--green); }
+
+.catalog {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(24px, 3vw, 34px);
+}
+.catalog h3 { font-size: 26px; }
+.catalog-text p { margin-top: 12px; color: var(--ink-soft); }
+.steps-list { margin: 0; padding-left: 22px; display: grid; gap: 10px; font-size: 15.5px; color: var(--ink-soft); }
+.steps-list b { color: var(--ink); }
+
+/* ---------- калькулятор ---------- */
+
+.calc {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.calc-controls {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(22px, 2.6vw, 30px);
+  display: grid;
+  gap: 20px;
+}
+
+.ctl { display: grid; gap: 10px; font-size: 15px; }
+.ctl-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ctl-top output { font-family: 'Oswald', Arial, sans-serif; font-size: 19px; font-weight: 600; color: var(--green); font-variant-numeric: tabular-nums; }
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--green);
+  height: 22px;
+  cursor: pointer;
+}
+input[type="range"]:focus-visible { outline: 3px solid var(--ring); outline-offset: 4px; border-radius: 999px; }
+
+.calc-out {
+  background: var(--green);
+  color: var(--on-accent);
+  border-radius: var(--radius);
+  padding: clamp(22px, 2.6vw, 30px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.out { display: flex; flex-direction: column; gap: 2px; }
+.out-lbl { font-size: 13.5px; opacity: .85; }
+.out-num { font-family: 'Oswald', Arial, sans-serif; font-size: clamp(26px, 3vw, 34px); font-weight: 600; font-variant-numeric: tabular-nums; }
+.verdict {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255, 255, 255, .28);
+  padding-top: 14px;
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+
+/* ---------- воронка ---------- */
+
+.funnel { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 22px; }
+
+.f-stage {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 14px;
+  font: inherit;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: transform .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.f-stage:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.f-stage:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+.f-stage.on { border-color: var(--green); box-shadow: 0 0 0 3px var(--ring); }
+.f-stage .st-n { display: block; font-family: 'Oswald', Arial, sans-serif; font-size: 12px; letter-spacing: 1.4px; color: var(--muted); }
+.f-stage .st-t { display: block; font-family: 'Oswald', Arial, sans-serif; font-size: 18px; font-weight: 600; margin-top: 4px; }
+
+.funnel-detail {
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 24px;
+  display: grid;
+  gap: 10px;
+}
+.funnel-detail h4 { margin: 0; font-family: 'Oswald', Arial, sans-serif; font-size: 22px; font-weight: 600; }
+.funnel-detail .do { color: var(--ink-soft); }
+.funnel-detail .kpi-line { font-size: 15px; }
+.funnel-detail .kpi-line b { color: var(--green); }
+
+/* ---------- разбор задач ---------- */
+
+.sorter { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 22px; }
+
+.s-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 22px;
+  display: grid;
+  gap: 12px;
+}
+.s-q { font-weight: 600; font-size: 16.5px; }
+.s-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.s-btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease);
+}
+.s-btn:hover { border-color: var(--green); color: var(--ink); }
+.s-btn:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+.s-btn.right { background: var(--green); border-color: var(--green); color: var(--on-accent); }
+.s-btn.wrong { border-color: var(--burgundy); color: var(--burgundy); }
+.s-card.done .s-btn { cursor: default; }
+.s-ans { font-size: 15px; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 12px; animation: pop .4s var(--ease) both; }
+.s-ans b { color: var(--ink); }
+.score { margin-top: 16px; font-size: 16px; color: var(--ink-soft); min-height: 1.6em; }
+.score b { color: var(--green); }
+
+@media (max-width: 900px) {
+  .fb-grid, .catalog, .calc, .sorter { grid-template-columns: 1fr; }
+  .funnel { grid-template-columns: repeat(2, 1fr); }
+  .wk { grid-template-columns: 1fr; gap: 8px; }
+  .calc-out { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .funnel { grid-template-columns: 1fr; }
+  .calc-out { grid-template-columns: 1fr; }
+}

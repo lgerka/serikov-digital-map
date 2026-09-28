@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Digital-карта Serikov Coffee</title>
-<meta name="description" content="Интерактивная карта развития сайта Serikov Coffee: аудит, шесть направлений работ, план на три месяца и граница между digital-маркетингом и контентом.">
+<meta name="description" content="Интерактивная карта развития Serikov Coffee: аудит сайта и кабинета Facebook, два параллельных трека, калькулятор теста трафика и разбор границ digital-маркетинга.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
@@ -17,11 +17,12 @@
   <div class="wrap">
     <div class="brand">Serikov <span>digital</span></div>
     <nav>
+      <a href="#strategy">Стратегия</a>
+      <a href="#fb">Facebook</a>
       <a href="#map">Карта работ</a>
-      <a href="#audit">Аудит</a>
-      <a href="#plan">План</a>
+      <a href="#calc">Калькулятор</a>
       <a href="#scope">Что такое digital</a>
-      <a href="#needs">Что нужно</a>
+      <a href="#plan">План</a>
     </nav>
     <button class="theme-btn" id="theme" type="button" aria-label="Переключить тему">◐</button>
   </div>
@@ -31,13 +32,13 @@
   <div class="hero-ring" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow reveal">Serikov Coffee · сентябрь 2026</p>
-    <h1 class="reveal">Сайт запущен. Дальше — считать и приводить людей</h1>
-    <p class="lead reveal">Интерактивная карта работ по serikovcoffee.kz: что показал аудит, какие шесть направлений закрываем и где проходит граница между digital-маркетингом и контентом.</p>
+    <h1 class="reveal">Аналитику настраиваем — трафик тестируем параллельно</h1>
+    <p class="lead reveal">Интерактивная карта: что показал аудит сайта и рекламного кабинета, как идут два трека одновременно, сколько стоит тест и где проходит граница между digital-маркетингом и контентом.</p>
     <div class="hero-actions reveal">
-      <a class="btn" href="#map">Открыть карту работ</a>
+      <a class="btn" href="#strategy">Как идём двумя треками</a>
       <a class="btn ghost" href="#scope">Что входит в digital-маркетинг</a>
     </div>
-    <p class="hero-meta reveal">Данные сняты с боевой базы магазина и проверкой сайта 27 сентября 2026 года</p>
+    <p class="hero-meta reveal">Данные сайта и базы — 27.09.2026, кабинет Meta — 28.09.2026</p>
   </div>
 </section>
 
@@ -55,11 +56,53 @@
   </div>
 </section>
 
+<section id="strategy">
+  <div class="wrap">
+    <p class="eyebrow reveal">Стратегия на 1–2 месяца</p>
+    <h2 class="h2 reveal">Два трека идут одновременно</h2>
+    <p class="lead reveal">Не «сначала всё настроим, потом реклама». Пока подключается аналитика, первый трафик с Facebook уже собирает данные и живых покупателей. Переключите трек, чтобы увидеть, что в нём происходит по неделям.</p>
+
+    <div class="tabs reveal" role="tablist" aria-label="Треки работы">
+      <button class="tab-btn on" type="button" role="tab" aria-selected="true" data-track="a">Трек A · аналитика и данные</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-track="b">Трек B · тест трафика Facebook</button>
+    </div>
+    <div class="track" id="track"></div>
+
+    <div class="pull reveal" style="margin-top:26px">
+      <b>Зачем параллельно:</b> пиксель начинает копить аудиторию с первого показа, а первые кампании дают живые цифры — цену клика и цену заказа именно в нашей нише. К моменту, когда аналитика собрана, у нас уже есть данные, на которых она заработает.
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="fb">
+  <div class="wrap">
+    <p class="eyebrow reveal">Проверка 28 сентября</p>
+    <h2 class="h2 reveal">Что уже есть в кабинете Facebook</h2>
+    <p class="lead reveal">Доступы на месте, но хозяйство запущенное: три рекламных аккаунта в двух бизнес-менеджерах, шесть пикселей и каталоги с новогодними подарками. Прежде чем лить бюджет, наводим порядок — это один-два дня.</p>
+
+    <div class="fb-grid reveal" id="fbGrid"></div>
+
+    <div class="catalog reveal">
+      <div class="catalog-text">
+        <h3>Каталог товаров и магазин в Facebook</h3>
+        <p>Чтобы в Facebook и Instagram появился магазин, привязанный к сайту, нужен товарный фид: файл, где по каждому из 212 товаров есть название, описание, цена, наличие, ссылка и фото. Сайт такой файл сейчас не отдаёт — делаю выгрузку прямо из Битрикса, она будет обновляться сама.</p>
+      </div>
+      <ol class="steps-list">
+        <li><b>Фид из Битрикса</b> — выгрузка всех активных товаров с ценой, остатком и фото, обновление раз в сутки</li>
+        <li><b>Новый каталог в бизнес-менеджере</b> — вместо двух старых «Новогодних подарков»</li>
+        <li><b>Связка каталога с пикселем</b> — чтобы Meta видела просмотры и покупки конкретных товаров</li>
+        <li><b>Проверка и подключение магазина</b> — товары в Instagram и Facebook, отметки в постах</li>
+        <li><b>Динамическая реклама</b> — человек видит тот кофе, который смотрел на сайте</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <section id="map">
   <div class="wrap">
     <p class="eyebrow reveal">Карта работ</p>
     <h2 class="h2 reveal">Шесть направлений. Нажмите на любое</h2>
-    <p class="lead reveal">Порядок не случайный: сначала измерение и данные, потом реклама. SEO, конверсия и скорость идут параллельно.</p>
+    <p class="lead reveal">Порядок не случайный: сначала измерение и данные, потом масштаб рекламы. SEO, конверсия и скорость идут параллельно.</p>
 
     <div class="stage-outer reveal">
       <div class="stage" id="stage">
@@ -122,54 +165,55 @@
 
 <section class="alt" id="audit">
   <div class="wrap">
-    <p class="eyebrow reveal">Аудит 27 сентября</p>
-    <h2 class="h2 reveal">Что нашла проверка сайта</h2>
+    <p class="eyebrow reveal">Аудит сайта 27 сентября</p>
+    <h2 class="h2 reveal">Что нашла проверка</h2>
     <p class="lead reveal">Семь находок. Каждая раскрывается: чем мешает продажам и что с ней делаем.</p>
     <div class="acc reveal" id="acc"></div>
     <p class="good reveal">Что уже хорошо: свои заголовки и описания разделов, карта сайта на 138 адресов, 192 редиректа со старого сайта, закрытые от поиска корзина и оформление, правильный ответ на несуществующих страницах, gzip и HTTP/2.</p>
   </div>
 </section>
 
-<section id="plan">
+<section id="calc">
   <div class="wrap">
-    <p class="eyebrow reveal">План</p>
-    <h2 class="h2 reveal">Три шага до первой рекламы</h2>
-    <p class="lead reveal">Шаги 1 и 2 идут параллельно. Реклама включается только после них — иначе бюджет платит за трафик, который мы не считаем.</p>
-    <div class="steps reveal">
-      <div class="step">
-        <p class="when">Шаг 1 · две недели</p>
-        <h3>Начинаем видеть</h3>
-        <ul>
-          <li>Метрика и GA4 с целями</li>
-          <li>Пиксели Meta, TikTok, Google</li>
-          <li>События воронки и покупки</li>
-          <li>Страница «Спасибо за заказ»</li>
-          <li>Search Console и Вебмастер</li>
-        </ul>
+    <p class="eyebrow reveal">Сколько стоит тест</p>
+    <h2 class="h2 reveal">Калькулятор первого запуска</h2>
+    <p class="lead reveal">Подвигайте ползунки — это модель, а не обещание. Она показывает, на какие цифры мы смотрим и когда тест считается удачным. Средний чек взят наш реальный: 18 800 ₸.</p>
+
+    <div class="calc reveal">
+      <div class="calc-controls">
+        <label class="ctl">
+          <span class="ctl-top"><span>Бюджет на тест</span><output id="outBudget">150 000 ₸</output></span>
+          <input type="range" id="budget" min="50000" max="600000" step="10000" value="150000">
+        </label>
+        <label class="ctl">
+          <span class="ctl-top"><span>Цена 1000 показов</span><output id="outCpm">2 500 ₸</output></span>
+          <input type="range" id="cpm" min="1000" max="6000" step="100" value="2500">
+        </label>
+        <label class="ctl">
+          <span class="ctl-top"><span>Кликают по объявлению</span><output id="outCtr">1,5 %</output></span>
+          <input type="range" id="ctr" min="3" max="30" step="1" value="15">
+        </label>
+        <label class="ctl">
+          <span class="ctl-top"><span>Покупают на сайте</span><output id="outCr">1,5 %</output></span>
+          <input type="range" id="cr" min="3" max="40" step="1" value="15">
+        </label>
+        <label class="ctl">
+          <span class="ctl-top"><span>Средний чек</span><output id="outCheck">18 800 ₸</output></span>
+          <input type="range" id="check" min="8000" max="40000" step="100" value="18800">
+        </label>
       </div>
-      <div class="step">
-        <p class="when">Шаг 2 · месяц</p>
-        <h3>Готовим витрину</h3>
-        <ul>
-          <li>Микроразметка и описания карточек</li>
-          <li>Понятные адреса товаров</li>
-          <li>Товарный фид для рекламы</li>
-          <li>Отзывы и скорость</li>
-          <li>Карты и страницы городов</li>
-        </ul>
-      </div>
-      <div class="step">
-        <p class="when">Шаг 3 · месяцы 2–3</p>
-        <h3>Включаем трафик</h3>
-        <ul>
-          <li>Тесты Meta, TikTok, Google</li>
-          <li>Ретаргет и похожие аудитории</li>
-          <li>Отчёт по окупаемости связок</li>
-          <li>Масштабируем то, что окупается</li>
-          <li>Выключаем то, что нет</li>
-        </ul>
+      <div class="calc-out">
+        <div class="out"><span class="out-lbl">Показы</span><span class="out-num" id="rImp">—</span></div>
+        <div class="out"><span class="out-lbl">Клики на сайт</span><span class="out-num" id="rClicks">—</span></div>
+        <div class="out"><span class="out-lbl">Заказы</span><span class="out-num" id="rOrders">—</span></div>
+        <div class="out"><span class="out-lbl">Цена заказа</span><span class="out-num" id="rCpa">—</span></div>
+        <div class="out"><span class="out-lbl">Выручка</span><span class="out-num" id="rRev">—</span></div>
+        <div class="out"><span class="out-lbl">Доля рекламы в выручке</span><span class="out-num" id="rDrr">—</span></div>
+        <p class="verdict" id="verdict"></p>
       </div>
     </div>
+    <p class="note reveal">Важно: первый заказ с холодной рекламы часто выходит почти в ноль — зарабатывает второй. Поэтому в плане рядом с рекламой стоят отзывы, письма по базе 7 894 клиентов и скидочные ступени: они делают повторную покупку дешевле первой.</p>
+    <p class="note reveal" style="margin-top:12px">Реальные цифры появятся после первых двух недель: тогда вместо ползунков будут наши CPM, CTR и конверсия, и разговор про бюджет станет арифметикой, а не спором.</p>
   </div>
 </section>
 
@@ -177,8 +221,13 @@
   <div class="wrap">
     <p class="eyebrow reveal">Зона ответственности</p>
     <h2 class="h2 reveal">Что такое digital-маркетинг и где он заканчивается</h2>
-    <p class="lead reveal">Digital-маркетинг — это управление спросом и продажами в интернете: трафик → сайт → заказ → повторная покупка. Предмет работы — цифры на этом пути, а не публикации. Внутри digital два разных контура, и это разные профессии.</p>
+    <p class="lead reveal">Digital-маркетинг — это управление спросом и продажами в интернете: трафик → сайт → заказ → повторная покупка. Предмет работы — цифры на этом пути, а не публикации.</p>
 
+    <h3 class="sub-h reveal">Воронка: нажмите на этап, чтобы увидеть, что там делает digital</h3>
+    <div class="funnel reveal" id="funnel"></div>
+    <div class="funnel-detail" id="funnelDetail"></div>
+
+    <h3 class="sub-h reveal" style="margin-top:44px">Внутри интернет-маркетинга два разных ремесла</h3>
     <div class="contours reveal">
       <div class="contour mine">
         <p class="kicker">Контур 1 · performance и данные — это я</p>
@@ -208,7 +257,12 @@
       </div>
     </div>
 
-    <h3 style="margin-top:38px; font-size:24px" class="reveal">Где мы стыкуемся</h3>
+    <h3 class="sub-h reveal" style="margin-top:44px">Проверьте себя: чья это задача?</h3>
+    <p class="lead reveal" style="margin-top:8px">Выберите ответ — карточка покажет, как правильно и почему. Это же и есть ответ на вопрос «что входит в мои обязанности».</p>
+    <div class="sorter reveal" id="sorter"></div>
+    <p class="score" id="score" aria-live="polite"></p>
+
+    <h3 class="sub-h reveal" style="margin-top:44px">Где мы стыкуемся с контентом</h3>
     <div class="flow reveal">
       <div class="flow-step"><b>1. Я даю задание</b>Аудитория, оффер, формат, площадка и что должно быть в кадре</div>
       <div class="flow-step"><b>2. Контент снимает</b>Съёмка, монтаж, тексты в стиле бренда</div>
@@ -216,12 +270,16 @@
       <div class="flow-step"><b>4. Возвращаю цифры</b>Какой ролик принёс заказы и по какой цене — под следующую съёмку</div>
     </div>
 
+    <h3 class="sub-h reveal" style="margin-top:44px">Частые возражения и ответы на них</h3>
+    <div class="acc reveal" id="obj"></div>
+
     <div class="table-wrap reveal">
       <table>
         <tr><th style="width:44%">Задача</th><th style="width:28%">Кто ведёт</th><th style="width:28%">Кто помогает</th></tr>
         <tr><td class="who">Сайт, каталог, оплата и доставка</td><td class="me">Digital</td><td>Разработка</td></tr>
         <tr><td class="who">Реклама и рекламный бюджет</td><td class="me">Digital</td><td>Контент — креативы</td></tr>
         <tr><td class="who">Аналитика и отчёты по выручке</td><td class="me">Digital</td><td>—</td></tr>
+        <tr><td class="who">Каталог товаров в Facebook и Instagram</td><td class="me">Digital</td><td>Контент — фото товаров</td></tr>
         <tr><td class="who">SEO, карты, страницы городов</td><td class="me">Digital</td><td>Контент — тексты</td></tr>
         <tr><td class="who">Письма и работа с базой клиентов</td><td class="me">Digital</td><td>Контент — стиль писем</td></tr>
         <tr><td class="who">Идеи для съёмок и съёмки рилсов</td><td class="them">Контент и SMM</td><td class="both">Digital — задание под кампанию</td></tr>
@@ -234,37 +292,77 @@
     <div class="pull reveal">
       <b>Короткая формулировка для руководителя:</b> я отвечаю за то, сколько людей пришло на сайт, сколько из них купили и по какой цене. За то, что мы снимаем и публикуем в Instagram, отвечает контент-направление. Я говорю, какой креатив нужен под кампанию, и показываю цифрами, какой из них принёс заказы.
     </div>
-
-    <p class="note reveal" style="margin-top:26px">Почему это не стоит смешивать: съёмка и ведение аккаунта — это производство, оно съедает целые дни. Настройка аналитики, рекламы и сайта — другая работа и другие инструменты. Когда один человек делает всё сразу, реклама не оптимизируется, а контент выходит рывками — и обе части дают меньше, чем могли бы.</p>
   </div>
 </section>
 
-<section id="needs">
+<section id="plan">
   <div class="wrap">
-    <p class="eyebrow reveal">Что нужно от компании</p>
-    <h2 class="h2 reveal">Чтобы начать, нужны три вещи</h2>
-    <div class="needs reveal">
-      <div class="need">
-        <h3>Доступы</h3>
+    <p class="eyebrow reveal">План</p>
+    <h2 class="h2 reveal">Что будет за три месяца</h2>
+    <p class="lead reveal">Первые два месяца треки идут рядом: аналитика собирается, трафик тестируется. Третий месяц — масштаб того, что окупилось.</p>
+    <div class="steps reveal">
+      <div class="step">
+        <p class="when">Месяц 1</p>
+        <h3>Ставим измерение и пробуем трафик</h3>
         <ul>
-          <li>Рекламные кабинеты Meta и TikTok, оформленные на компанию</li>
-          <li>Аккаунт Google для Ads, Analytics и Search Console</li>
-          <li>Права на карточки в 2ГИС, Яндекс и Google Картах</li>
+          <li>Порядок в кабинете: один аккаунт, один пиксель</li>
+          <li>Пиксель и события покупки на сайте</li>
+          <li>Метрика, GA4, Search Console</li>
+          <li>Фид и каталог товаров в Facebook</li>
+          <li>Первые кампании на небольшой бюджет</li>
         </ul>
       </div>
+      <div class="step">
+        <p class="when">Месяц 2</p>
+        <h3>Чиним витрину и учимся на данных</h3>
+        <ul>
+          <li>Страница «Спасибо» и отзывы</li>
+          <li>Микроразметка и описания карточек</li>
+          <li>Скорость и картинки</li>
+          <li>Ретаргет и похожие аудитории</li>
+          <li>Первый отчёт с ценой заказа</li>
+        </ul>
+      </div>
+      <div class="step">
+        <p class="when">Месяц 3</p>
+        <h3>Масштабируем то, что окупается</h3>
+        <ul>
+          <li>Динамическая реклама каталога</li>
+          <li>Google Поиск и ремаркетинг</li>
+          <li>Письма по базе и брошенная корзина</li>
+          <li>Карты, города, SEO-страницы</li>
+          <li>Выключаем то, что не окупилось</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="needs">
+  <div class="wrap">
+    <p class="eyebrow reveal">Что нужно от компании</p>
+    <h2 class="h2 reveal">Доступы есть. Нужны решения и бюджет</h2>
+    <div class="needs reveal">
       <div class="need">
         <h3>Решения</h3>
         <ul>
+          <li>В каком аккаунте работаем — предлагаю CoffeeOnline, у него привязана оплата</li>
           <li>Чем награждаем за отзыв: скидкой или баллами</li>
           <li>Кто отвечает на отзывы на картах в течение суток</li>
         </ul>
       </div>
       <div class="need">
-        <h3>Ресурсы</h3>
+        <h3>Бюджет</h3>
         <ul>
-          <li>Тестовый бюджет на рекламу — платится площадкам напрямую</li>
-          <li>Съёмка под вертикальное видео для таргета</li>
-          <li>Фото точек для карточек на картах</li>
+          <li>Тестовый бюджет на первый месяц — платится площадке напрямую</li>
+          <li>Решение по цене заказа, при которой тест считается удачным</li>
+        </ul>
+      </div>
+      <div class="need">
+        <h3>Материалы</h3>
+        <ul>
+          <li>Вертикальное видео под таргет — от контент-направления</li>
+          <li>Фото товаров для каталога и фото точек для карт</li>
         </ul>
       </div>
     </div>
@@ -274,7 +372,7 @@
 <footer class="foot">
   <div class="wrap">
     <span>Serikov Coffee · карта развития digital</span>
-    <span>Данные сайта и базы на 27.09.2026</span>
+    <span>Сайт и база — 27.09.2026, кабинет Meta — 28.09.2026</span>
     <span>Внутренний документ компании</span>
   </div>
 </footer>
